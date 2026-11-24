@@ -1,149 +1,141 @@
-# MailCraft - Professional Email Composer
+<div align="center">
 
-A beautiful, modern email composer built with Tiptap, Velt, Next.js, and shadcn/ui. Features rich-text editing, real-time collaboration with inline commenting, and a premium glassmorphic UI.
+<img src="https://raw.githubusercontent.com/Studio1HQ/Studio1HQ/main/assets/banners/velt-email-composer.webp" alt="MailCraft Email Composer with Velt: A Tiptap email composer with inline comments, presence and notifications" width="100%" />
 
-![Next.js](https://img.shields.io/badge/Next.js-16.1.6-black)
-![React](https://img.shields.io/badge/React-19.2.4-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3-blue)
-![Tiptap](https://img.shields.io/badge/Tiptap-2.8-purple)
-![Velt](https://img.shields.io/badge/Velt-5.0.0--beta-green)
-![License](https://img.shields.io/badge/license-MIT-green)
+<br />
+<br />
+
+# MailCraft Email Composer with Velt
+
+### A Tiptap email composer with inline comments, presence and notifications
+
+MailCraft is a Next.js email composer built on Tiptap. Velt adds inline comments on selected text, a comments sidebar, presence and notifications.
+
+<br />
+
+[![Built by Studio1](https://img.shields.io/badge/Built_by_Studio1-f97316?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgMTYwIiBmaWxsPSJub25lIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMzVDMCAxNi42ODA3IDE0LjA3NDQgMS42NDg0NCAzMiAwLjEyNjk1M1YxNDFINTEuMDUyM0M1Mi40MzA4IDEzNy4zNDQgNTQuNzQ0NiAxMzMuNjg5IDU3Ljk5MzggMTMwLjAzM0M2MS4xNDQ2IDEyNi41MDggNjQuNjg5MiAxMjMuNDQgNjguNjI3NyAxMjAuODI5QzcyLjU2NjIgMTE4LjM0OSA3Ni4zNTY5IDExNi43ODIgODAgMTE2LjEyOVY4Ni43NTQ0Qzc1LjQ3MDggODcuOTI5MiA3MS4zODQ2IDg5LjY5MTkgNjcuNzQxNSA5Mi4wNDE1QzY0IDk0LjUyMjUgNjAuNzUwOCA5Ny40NiA1Ny45OTM4IDEwMC44NTRDNTYuNTM0NSAxMDIuNzIgNTUuMjU0NSAxMDQuNjU5IDU0LjE1MzkgMTA2LjY3MVYwSDEyNUMxNDQuMzMgMCAxNjAgMTUuNjY5OSAxNjAgMzVWMTI1QzE2MCAxNDQuMzMgMTQ0LjMzIDE2MCAxMjUgMTYwSDEyNFYxOEgxMDQuOTQ4QzEwMy41NjkgMjEuNjgxNiAxMDEuMjU1IDI1LjM2MjggOTguMDA2MiAyOS4wNDQ0Qzk0Ljg1NTQgMzIuNTk0MiA5MS4zMTA4IDM1LjY4NDEgODcuMzcyMyAzOC4zMTRDODMuNDMzOCA0MC44MTIgNzkuNjQzMSA0Mi4zODk2IDc2IDQzLjA0NzRWNzIuNjMwNEM4MC41MjkyIDcxLjQ0NzMgODQuNjE1NCA2OS42NzI0IDg4LjI1ODUgNjcuMzA1N0M5MiA2NC44MDc2IDk1LjI0OTIgNjEuODQ5MSA5OC4wMDYyIDU4LjQzMDdDOTkuNDY1NSA1Ni41NTEzIDEwMC43NDUgNTQuNTk4NiAxMDEuODQ2IDUyLjU3MjNWMTYwSDM1QzE1LjY3IDE2MCAwIDE0NC4zMyAwIDEyNVYzNVoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4K)](https://studio1hq.com)
+[![Built with Velt](https://img.shields.io/badge/Built_with_Velt-141414?style=for-the-badge)](https://velt.dev)
+
+[Velt docs](https://docs.velt.dev) &nbsp;·&nbsp; [Velt](https://velt.dev) &nbsp;·&nbsp; [More examples](https://github.com/Studio1HQ) &nbsp;·&nbsp; [studio1hq.com](https://studio1hq.com)
+
+</div>
+
+<br />
+
+## Overview
+
+MailCraft is an email composer built with Next.js, Tiptap, shadcn/ui and [Velt](https://velt.dev). Users write an email in a rich text editor and discuss it by commenting on selected text.
+
+Velt provides inline comments through `@veltdev/tiptap-velt-comments`, along with presence, notifications and a comments sidebar. Two predefined users (Nany and Mary) let you test collaboration in one browser.
 
 ## Features
 
-### Rich Text Editor
+- **Rich text editor**: Tiptap with a bubble menu on selection, headings, lists, bold and italic.
+- **Inline comments**: Select text and add a comment with the Velt Tiptap integration.
+- **Presence**: `VeltPresence` shows who is viewing the email.
+- **Notifications**: `VeltNotificationsTool` shows a bell for new comments and replies.
+- **Comments sidebar**: `VeltCommentsSidebar` and `VeltSidebarButton` manage all discussions.
+- **User switching**: Switch between Nany and Mary.
+- **Dark and light mode**: Both themes supported, with a responsive layout.
 
-- **Tiptap Powered** - Modern headless rich text editor framework
-- **Bubble Menu** - Floating toolbar appears on text selection for quick actions
-- **Advanced Formatting** - Support for headings, lists, bold, italic, and more
-- **tiptap-Style Integration** - Designed for seamless data management workflows
+## Tech stack
 
-### Real-Time Collaboration (Velt)
+| Layer | Tool |
+| --- | --- |
+| Framework | [Next.js](https://nextjs.org) (App Router), [React](https://react.dev), TypeScript |
+| Editor | [Tiptap](https://tiptap.dev) |
+| Collaboration | [Velt](https://velt.dev) (`@veltdev/react`, `@veltdev/tiptap-velt-comments`) |
+| UI | [Tailwind CSS](https://tailwindcss.com), [shadcn/ui](https://ui.shadcn.com), [Lucide](https://lucide.dev) |
+| State | [Zustand](https://zustand-demo.pmnd.rs) |
 
-- **Presence** - See who's currently viewing the email in real time
-- **Inline Comments** - Select text and add comments directly in the editor using Velt's Tiptap integration
-- **Notifications** - Real-time notification bell for new comments and replies
-- **Comments Sidebar** - Manage all discussions in a dedicated sidebar
-- **User Switching** - Easily switch between predefined users (Nany, Mary) to test collaboration
-
-### UI / UX
-
-- **Dark / Light Mode** - Full support for both themes with smooth transitions
-- **Responsive Design** - Optimized for desktop and mobile devices
-- **shadcn/ui** - Highly accessible, beautiful UI components
-
-## Modern Tech Stack
-
-- **React 19** - Latest React features including updated hooks
-- **Next.js 16** - App Router architecture with server and client components
-- **TypeScript** - Fully type-safe development experience
-- **Tiptap** - Highly extensible rich text editor
-- **Velt SDK v5** - Cutting-edge collaboration tools including `@veltdev/tiptap-velt-comments`
-- **Tailwind CSS** - Modern utility-first styling
-- **Zustand** - Lightweight state management for user sessions
-- **Lucide React** - Minimalist icon library
-
-## Getting Started
+## Getting started
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 18 or later
 - npm or yarn
-- Velt API Key (sign up at [velt.dev](https://velt.dev))
+- A Velt API key from the [Velt console](https://console.velt.dev)
 
 ### Installation
 
-1. Clone the repository:
-
 ```bash
-git clone <repository-url>
-cd velt-email-composer-tiptap
-```
-
-2. Install dependencies:
-
-```bash
+git clone https://github.com/Studio1HQ/velt-email-composer.git
+cd velt-email-composer
 npm install
 ```
 
-3. Set up environment variables:
+### Environment variables
+
+Create a `.env` file in the project root.
+
+| Variable | Description |
+| --- | --- |
+| `NEXT_PUBLIC_VELT_ID` | Your Velt API key. |
 
 ```bash
-# Create .env file
 echo "NEXT_PUBLIC_VELT_ID=your_velt_api_key_here" > .env
 ```
 
-4. Start the development server:
+### Run
 
 ```bash
 npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Project Structure
+## How it works
 
-```
-├── app/
-│   ├── (app)/                    # Main application routes
-│   │   ├── layout.tsx            # Velt + Theme providers
-│   │   └── page.tsx              # Email composer page
-│   ├── layout.tsx                # Root layout (HTML, Fonts)
-│   └── globals.css               # Global styles and Tailwind
-├── components/
-│   ├── ui/                       # shadcn/ui components
-│   ├── EmailEditor.tsx           # Tiptap editor with Velt integration
-│   ├── EditorFooter.tsx          # Editor footer with formatting options
-│   ├── email-composer.tsx        # Main composer layout
-│   └── navbar.tsx                # Navigation with Velt tools
-├── constant/
-│   └── general.ts                # Initial editor content
-├── helper/
-│   └── userdb.ts                 # User management and state
-├── lib/
-│   └── utils.ts                  # Tailwind class merging utility
-├── public/                       # Static assets
-└── package.json                  # Dependencies and scripts
+```text
+app/(app)/layout.tsx       Velt and theme providers
+app/(app)/page.tsx         email composer page
+components/EmailEditor.tsx Tiptap editor with Velt integration
+components/EditorFooter.tsx footer with formatting options
+components/email-composer.tsx main composer layout
+components/navbar.tsx      navigation with Velt tools
+constant/general.ts        initial editor content
+helper/userdb.ts           user management and state
+hooks/use-theme.tsx        theme hook
 ```
 
-## Velt Integration
-
-This project uses the Velt SDK to add collaborative features.
-
-### Tiptap Velt Comments
-
-The editor integrates `@veltdev/tiptap-velt-comments` for inline discussions:
+The editor uses the Velt Tiptap integration:
 
 ```tsx
-import {
-  TiptapVeltComments,
-  renderComments,
-  addComment,
-} from "@veltdev/tiptap-velt-comments";
+import { TiptapVeltComments, renderComments, addComment } from "@veltdev/tiptap-velt-comments";
 
-// Configure extension
-TiptapVeltComments.configure({ persistVeltMarks: false });
-
-// Render existing comments
-renderComments({ editor, editorId, commentAnnotations });
-
-// Add new comment
-addComment({ editor, editorId });
+TiptapVeltComments.configure({ persistVeltMarks: false });  // editor extension
+renderComments({ editor, editorId, commentAnnotations });   // render existing comments
+addComment({ editor, editorId });                           // add a comment on the selection
 ```
 
-### Components Used
+## Resources
 
-| Component               | Purpose                 |
-| ----------------------- | ----------------------- |
-| `VeltProvider`          | Main SDK initialization |
-| `VeltPresence`          | Real-time user avatars  |
-| `VeltNotificationsTool` | Notification bell       |
-| `VeltSidebarButton`     | Toggle for comments     |
-| `VeltCommentsSidebar`   | Discussion panel        |
+- [Velt documentation](https://docs.velt.dev): SDK guides.
+- [Velt](https://velt.dev): product site.
+- [Tiptap guide](https://tiptap.dev/docs): editor docs.
+- [shadcn/ui](https://ui.shadcn.com): UI components.
 
-## 📚 Resources
+<br />
 
-- [Velt Documentation](https://docs.velt.dev)
-- [Tiptap Guide](https://tiptap.dev/docs)
-- [shadcn/ui](https://ui.shadcn.com)
+---
+
+<div align="center">
+
+<a href="https://studio1hq.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Studio1HQ/website/main/brand/studio1-logo-on-dark.svg" />
+    <img src="https://raw.githubusercontent.com/Studio1HQ/website/main/brand/studio1-logo-on-light.svg" alt="Studio1" width="160" />
+  </picture>
+</a>
+
+Built by **[Studio1](https://studio1hq.com)**, the technical content and DevRel partner for devtool teams. Made with [Velt](https://velt.dev).<br />
+Browse more open-source examples at [github.com/Studio1HQ](https://github.com/Studio1HQ).
+
+[![Website](https://img.shields.io/badge/studio1hq.com-0b0807?style=for-the-badge&logo=googlechrome&logoColor=white)](https://studio1hq.com)
+[![Book a call](https://img.shields.io/badge/Book_a_strategy_call-f97316?style=for-the-badge&logo=googlecalendar&logoColor=white)](https://cal.com/studio1/collab)
+[![X](https://img.shields.io/badge/%40Studio1HQ-141414?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Studio1HQ)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/studio1hq/)
+
+<sub><a href="https://studio1hq.com">studio1hq.com</a> · Technical content, docs, video and DevRel for devtools</sub>
+
+</div>
